@@ -1,0 +1,274 @@
+* { 
+  font-family: courier; 
+  box-sizing:border-box;
+}
+
+html, body { 
+  margin:0; 
+  padding:0; 
+  height:100%; 
+  min-height:100%; 
+}
+
+/* Layout */
+.grid {
+	position: relative;
+  width: 100vw;
+  height: 100vh;
+	display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.grid .column {
+	position: relative;
+	overflow: hidden;
+	width: 45%;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid .fifty{
+	width: 55%;
+}
+.grid .column img {
+	position: relative;
+	display: block;
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+	opacity: 0.8;
+}
+.grid .column .content {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.3rem;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.grid .column .content::before,
+.grid .column .content::after {
+	pointer-events: none;
+}
+
+.grid .column h2 {
+	word-spacing: -0.15rem;
+	font-weight: 300;
+}
+
+.grid .column h2 span {
+	display: block;
+	font-weight: 800;
+	font-size: 2.8rem;
+}
+
+.grid .column h2,
+.grid .column p {
+	margin: 0;
+}
+
+.grid .column p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+#logo{
+	text-align: center;
+	width: 100%;
+	position: absolute;
+  top: 70%;
+  right: 3%;
+	-webkit-transform: translateY(-10%);
+	-ms-transform: translateY(-10%);
+	transform: translateY(-10%);
+	display: flex;
+	justify-content: center;
+}
+
+a{
+  text-transform: uppercase;
+  font-size: .6rem;
+  text-decoration: none;
+  color: #FFF;
+  display: block;
+  font-family: sans-serif;
+}
+/*
+#left{
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/ISSlRnm.png) no-repeat top center;
+  background-size: cover;
+}
+*/
+#right{
+  background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/927610/man_guy_jumping_levitate_railing-1407739.jpg) no-repeat center top;
+  background-size: cover;
+}
+
+#left .content{
+  background: rgba(25,235,248, .5);
+}
+#right .content{
+  background: rgba(234,210,24, .5);
+  
+}
+
+/* TRANSLATE BUTTON */
+
+.modal-content {
+	width: 600px;
+	text-align: center;
+  display: inline-block;
+}
+
+.search {
+  background: #fff;
+  border: 0;
+  font-size: 20px;
+  padding: 5px;
+  padding-left: 20px;
+  height: 60px;
+  width: 60%;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  box-shadow: 1px 2px rgba(51, 51, 51, 0.13);
+}
+
+.search:focus {
+  outline: none;
+  background: #1a1a1a;
+}
+
+.submit {
+  background: #fff;
+  border: 0;
+  border-left: 1px solid rgba(85, 85, 85, 0.49);
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 400;
+  outline: none;
+  height: 60px;
+  width: 20%;
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: 1px 2.3px rgba(51, 51, 51, 0.13);
+  transition: color 0.2s, background 0.2s;
+  color: #1a1a1a;
+}
+
+.submit:hover,
+.submit:active {
+  background: #a0a0a0;
+  color: #1a1a1a;
+}
+
+textarea {
+    resize: none;
+}
+
+.translation {
+    background: #fafafa;
+    border: 0;
+    border-bottom: 1px solid #fff;
+    font-size: 16px;
+    padding: 10px 5px;
+    margin: 4px 0 4px 4px;
+    overflow-wrap: break-word;
+    overflow: auto;
+    width: 100%;
+    height: 150px;
+}
+
+/* ----------------------------------------------------- */
+/* TOOLTIP */
+/* ----------------------------------------------------- */
+
+.tooltip {
+	position: relative;
+	width: 210px;
+	margin: 0 auto;
+  top: 170px;
+  left: 250px;
+}
+
+.tooltip-content {
+	position: absolute;
+	line-height: 1.2;
+	pointer-events: none;
+	text-align: center;
+	z-index: 100;
+	opacity: 0;
+	padding: 1.75em;
+	font-size: 0.7em;
+	bottom: 100%;
+  color: #1a1a1a;
+}
+
+.tooltip-effect-1 .tooltip-content {
+	width: 180px;
+	right: 83%;
+	margin: 0 0 20px 0;
+	transform: scale3d(0,0,1);
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.visible .tooltip-content {
+	opacity: 1;
+	transform: scale3d(1,1,1);
+	transition-delay: 0.15s;
+}
+
+/* Shape */
+.tooltip-shape {
+	position: absolute;
+	width: 220px;
+	height: 165px;
+	pointer-events: none;
+}
+
+.tooltip-effect-1 .tooltip-shape {
+	top: 0;
+	right: 65%;
+	transform: translate3d(0,-90%,0);
+}
+
+.tooltip:hover .tooltip-shape {
+	pointer-events: auto;
+}
+
+.tooltip-shape svg {
+	stroke: #333;
+	stroke-width: 2;
+}
+
+.tooltip-effect-1 .tooltip-shape svg path {
+	fill: #fff;
+	opacity: 0;
+	transform: scale3d(0,0,1);
+	transform-origin: 50% 50%;
+	transition: opacity 0.3s, transform 0.3s;
+}
+
+.visible .tooltip-shape svg path {
+	opacity: 1;
+	transform: scale3d(1,1,1);
+}
+
+.visible .tooltip-shape svg path#path2 {
+	transition-delay: 0.07s;
+}
+
+.visible .tooltip-shape svg path#path3 {
+	transition-delay: 0.14s;
+}
+
+.visible .tooltip-shape svg path#path4 {
+	transition-delay: 0.21s;
+}
