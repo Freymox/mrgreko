@@ -166,6 +166,15 @@ a{
 }
 */
 
+.submit {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .submit:hover,
 .submit:active {
   background: #a0a0a0;
