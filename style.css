@@ -147,6 +147,7 @@ a{
   background: #1a1a1a;
 }
 
+/*
 .submit {
   background: #fff;
   border: 0;
@@ -163,6 +164,7 @@ a{
   transition: color 0.2s, background 0.2s;
   color: #1a1a1a;
 }
+*/
 
 .submit:hover,
 .submit:active {
