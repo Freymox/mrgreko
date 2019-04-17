@@ -106,11 +106,12 @@ a{
   background: url() no-repeat top center;
   background-size: cover;
 }
-*/
+
 #right{
   background: url("Greko.png") no-repeat center top;
   background-size: cover;
 }
+*/
 
 #left .content{
   background: rgba(25,235,248, .5);
