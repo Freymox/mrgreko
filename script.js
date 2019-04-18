@@ -1,7 +1,3 @@
-document.querySelector('.submit').addEventListener('click', function() {
-	console.log("Click registred");
-});
-
 //------------------//
 //Dog text to normal//
 //------------------//
