@@ -61,7 +61,8 @@ var decodeDOG = function(dogCode){
   return decoded.map(arr => arr.join('')).join(' ');
 }
 
-document.querySelector('.submit').addEventListener('click', function() {
+//document.querySelector('.submit').addEventListener('click', function() {
+document.getElementById('submit').addEventListener('click', function() {
     var val = decodeDOG(document.querySelector('.search').value)
 	document.querySelector('.tooltip-content').textContent = val;
     document.querySelector('.search').value = "";
