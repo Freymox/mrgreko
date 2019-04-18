@@ -67,7 +67,7 @@ document.querySelector('.submit').addEventListener('click', function() {
     document.querySelector('.search').value = "";
     if (val==null || val=="") {
         console.log(`Empty value`);
-        document.querySelector('.tooltip-effect-1').classList.remove("visible");
+        //document.querySelector('.tooltip-effect-1').classList.remove("visible");
     } else {
         document.querySelector('.tooltip-effect-1').classList.add("visible");
     }
