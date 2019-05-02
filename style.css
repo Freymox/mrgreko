@@ -206,8 +206,7 @@ textarea {
 	position: relative;
 	width: 210px;
 	margin: 0 auto;
-  	top: 170px;
-  	left: 250px;
+  	top: 40%;
 }
 
 .tooltip-content {
