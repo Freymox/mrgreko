@@ -101,17 +101,16 @@ a{
 	display: block;
 	font-family: sans-serif;
 }
-/*
+
 #left{
-  background: url() no-repeat top center;
+  background: url("left.png") no-repeat top center;
   background-size: cover;
 }
 
 #right{
-  background: url("Greko.png") no-repeat center top;
+  background: url("right.png") no-repeat center top;
   background-size: cover;
 }
-*/
 
 #left .content{
 	background: rgba(25,235,248, .5);
