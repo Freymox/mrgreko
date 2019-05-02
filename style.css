@@ -24,7 +24,7 @@ html, body {
 	overflow: hidden;
 	width: 45%;
 	text-align: center;
-	cursor: pointer;
+	cursor: default;
 }
 
 .grid .fifty{
